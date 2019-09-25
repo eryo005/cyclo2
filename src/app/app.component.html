@@ -1,0 +1,14 @@
+<nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo center">Logo</a>
+      <ul class="left hide-on-med-and-down">
+        <li><a routerLink="/machine/list" href>Machines</a></li>
+        <li><a routerLink="/composant/list" href>Composant</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+          <li><a (click)="logout()" href>Logout</a></li>
+        </ul>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>

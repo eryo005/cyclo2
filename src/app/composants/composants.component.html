@@ -1,0 +1,25 @@
+<h1 class='center'>{{ title }}</h1>
+  <div class='container'>
+    <div class="row">
+            <div *ngFor='let composant of composants' class="col s6 m4" style="width: 18rem; ">
+                    <img [src]="composant.picture" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ composant.name }}</h5>
+                        <p class="card-text">{{ composant.created | date:"dd/MM/yyyy" }}</p>
+                    </div>
+
+                    <div class="card-action">
+                        <a  class="waves-effect waves-light btn">Sélectionner</a>
+                        <a (click)="selectComposant(composant)" class="waves-effect waves-light btn">Détail</a>
+                      </div>
+                </div>
+    </div>
+
+  </div>
+
+  <!-- Button to add composant -->
+  <a class="btn-floating btn-large waves-effect waves-light blue z-depth-3"
+    style="position: fixed; bottom: 25px; right: 25px;"
+    routerLink="/composant/add" href>
+    <strong>+</strong>
+  </a>
